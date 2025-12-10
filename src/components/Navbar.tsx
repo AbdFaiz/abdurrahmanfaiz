@@ -56,9 +56,6 @@ export default function Navbar() {
                                  group-hover:text-[#8b4513] transition-colors duration-300">
                     {item.label}
                   </span>
-                  <div className="absolute -bottom-5 left-0 right-0 h-0.5 bg-[#8b4513] 
-                                transform scale-x-0 group-hover:scale-x-100 
-                                transition-transform duration-300 origin-left"></div>
                 </Link>
               ))}
               
