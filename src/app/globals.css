@@ -6,6 +6,11 @@
     --accent: #0d0d0d;
 }
 
+html,
+body {
+    overflow-x: hidden;
+}
+
 body {
     background: var(--background);
     color: var(--foreground);
@@ -14,16 +19,4 @@ body {
 
 html {
     scroll-behavior: smooth;
-}
-
-
-/* Neo-brutalism styles */
-
-* {
-    box-sizing: border-box;
-}
-
-button,
-a {
-    transition: all 0.2s ease;
 }
