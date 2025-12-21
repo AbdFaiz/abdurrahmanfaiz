@@ -38,7 +38,7 @@ export interface Tool {
 // =========================
 export const listArtworks: Artwork[] = [
   {
-    id: 21,
+    id: 1,
     title: "Japan Castle",
     description:
       "A detailed architectural drawing of a traditional Japanese castle under the moon. Features intricate roofing details and stonework textures created through cross-hatching techniques.",
@@ -180,6 +180,8 @@ export const listTools: Tool[] = [
   { id: 5, name: "TypeScript", icon: "/assets/tools/ts.svg" },
   { id: 6, name: "React", icon: "/assets/tools/react.svg" },
   { id: 7, name: "NextJS", icon: "/assets/tools/next.svg" },
+  { id: 7, name: "Astro", icon: "/assets/tools/astro.svg" },
+  { id: 7, name: "jQuery", icon: "/assets/tools/jquery.svg" },
   { id: 8, name: "Node.js", icon: "/assets/tools/nodejs.svg" },
   { id: 9, name: "Laravel", icon: "/assets/tools/laravel.svg" },
   { id: 10, name: "Python", icon: "/assets/tools/python.svg" },
