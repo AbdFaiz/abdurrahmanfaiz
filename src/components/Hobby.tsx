@@ -2,11 +2,10 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { listArtworks, type Artwork } from "@/data";
+import { listArtworks } from "@/data";
 
 export default function Hobby() {
   const [activeImage, setActiveImage] = useState(0);
-  const playlistId = "4WjDzt4dbsDuLeyTj6Sspe";
 
   const activeArtwork = listArtworks[activeImage];
 
@@ -71,7 +70,7 @@ export default function Hobby() {
 
               {/* Main Art Display */}
               <div className="p-8 md:p-12">
-                <div className="h-64 md:h-96 rounded-xl relative overflow-hidden mb-8 group bg-gradient-to-br from-[#8b4513]/5 to-[#5a5a5a]/5">
+                <div className="h-64 md:h-96 rounded-xl relative overflow-hidden mb-8 group bg-linear-to-br from-[#8b4513]/5 to-[#5a5a5a]/5">
                   {/* Art Image */}
                   <div className="relative w-full h-full">
                     <Image
@@ -83,8 +82,8 @@ export default function Hobby() {
                       priority={activeImage === 0}
                     />
 
-                    {/* Overlay Gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    {/* Overlay Linear */}
+                    <div className="absolute inset-0 bg-linear-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                     {/* Japanese Pattern Overlay */}
                     <div className="absolute inset-0 opacity-10 pointer-events-none">

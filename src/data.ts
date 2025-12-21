@@ -11,15 +11,6 @@ export interface Artwork {
   medium: string;
 }
 
-export interface Music {
-  id: number;
-  title: string;
-  artist: string;
-  duration: string;
-  mood: string;
-  spotifyUrl: string;
-}
-
 export interface SocialLink {
   icon: string;
   url: string;
@@ -41,16 +32,6 @@ export interface Tool {
   name: string;
   icon: string;
 }
-
-export interface Project {
-  id: number;
-  nama: string;
-  desk: string;
-  type: "preview" | "code";
-  url: string;
-  technologies: string[];
-}
-
 
 // =========================
 // Artworks Data
@@ -95,53 +76,6 @@ export const listArtworks: Artwork[] = [
     year: "2023",
     image: "/assets/artworks/trio-monster.jpeg",
     medium: "Ink & Marker on Paper",
-  },
-];
-
-
-// =========================
-// Music Data
-// =========================
-export const listMusic: Music[] = [
-  {
-    id: 1,
-    title: "seasons",
-    artist: "Wave to earth",
-    duration: "4:17",
-    mood: "Relaxing • Focus",
-    spotifyUrl: "https://open.spotify.com/track/5NehrkQIEH134I4JcLv7O6",
-  },
-  {
-    id: 2,
-    title: "Pink + White",
-    artist: "Frank Ocean",
-    duration: "3:05",
-    mood: "Chill • Nostalgic",
-    spotifyUrl: "https://open.spotify.com/track/3xKsf9qdS1CyvXSMEid6g8",
-  },
-  {
-    id: 3,
-    title: "夜に駆ける",
-    artist: "YOASOBI",
-    duration: "4:21",
-    mood: "Energetic • Japanese",
-    spotifyUrl: "https://open.spotify.com/track/5G0Kb1RcYMKfFmWtBm8V8i",
-  },
-  {
-    id: 4,
-    title: "Blinding Lights",
-    artist: "The Weeknd",
-    duration: "3:22",
-    mood: "Upbeat • Modern",
-    spotifyUrl: "https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b",
-  },
-  {
-    id: 5,
-    title: "Glimpse of Us",
-    artist: "Joji",
-    duration: "3:54",
-    mood: "Emotional • Melancholic",
-    spotifyUrl: "https://open.spotify.com/track/6xGruZOHLs39ZbVccQTuPZ",
   },
 ];
 
@@ -251,59 +185,4 @@ export const listTools: Tool[] = [
   { id: 10, name: "Python", icon: "/assets/tools/python.svg" },
   { id: 11, name: "Node-red", icon: "/assets/tools/nodered.svg" },
   { id: 12, name: "Ubuntu", icon: "/assets/tools/ubuntu.svg" },
-];
-
-
-// =========================
-// Projects
-// =========================
-export const listProject: Project[] = [
-  {
-    id: 1,
-    nama: "Landing Page Company",
-    desk: "A modern landing page for a startup offering tracking and insurance.",
-    type: "preview",
-    url: "#",
-    technologies: ["Laravel", "CSS", "JavaScript"],
-  },
-  {
-    id: 2,
-    nama: "Inventory Management",
-    desk: "A Laravel-based system for managing and monitoring division inventories at Company.",
-    type: "code",
-    url: "https://github.com/AbdFaiz/inventory_management",
-    technologies: ["Laravel", "MySQL", "Bootstrap", "JavaScript"],
-  },
-  {
-    id: 3,
-    nama: "Stuck InCode",
-    desk: "A Stack Overflow clone built with Laravel, featuring question and answer functionality.",
-    type: "code",
-    url: "https://github.com/AbdFaiz/stuck-incode",
-    technologies: ["Laravel", "MySQL", "Bootstrap", "jQuery"],
-  },
-  {
-    id: 4,
-    nama: "Prayers Time",
-    desk: "A responsive web app that displays daily prayer times for cities across Indonesia using a public API, with a clean and minimalist interface.",
-    type: "preview",
-    url: "https://jws-abdurrahman.vercel.app",
-    technologies: ["Tailwind", "JavaScript", "API Integration"],
-  },
-  {
-    id: 5,
-    nama: "Web CMS & WebMail",
-    desk: "A web-based Content Management System for managing company user accounts and emails. Includes authentication, user management, and a modern webmail interface for sending and receiving internal emails.",
-    type: "code",
-    url: "#",
-    technologies: ["Laravel", "MySQL", "Bootstrap", "PHP Mailer"],
-  },
-  {
-    id: 6,
-    nama: "Bank Mini Web App",
-    desk: "A minimalist banking web application built with Laravel. Features include balance tracking, and transaction history, offering a smooth and modern user experience.",
-    type: "code",
-    url: "https://github.com/AbdFaiz/prausk-fintech",
-    technologies: ["Laravel", "MySQL", "Bootstrap", "JavaScript"],
-  },
 ];

@@ -1,5 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import { listProject, type Project } from "@/data";
+import { listProject } from "@/projects";
 
 export default function Projects() {
   // Helper untuk mendapatkan icon path berdasarkan nama teknologi
@@ -15,20 +16,12 @@ export default function Projects() {
       "Bootstrap": "/assets/tools/bootstrap.svg",
       "JavaScript": "/assets/tools/js.svg",
       "jQuery": "/assets/tools/jquery.svg",
-      "HTML": "/assets/tools/html5.svg",
+      "HTML": "/assets/tools/html.svg",
       "CSS": "/assets/tools/css3.svg",
-      "HTML5": "/assets/tools/html5.svg",
       "CSS3": "/assets/tools/css3.svg",
-      "Framer Motion": "/assets/tools/framer.svg",
-      "API Integration": "/assets/tools/api.svg",
-      "REST API": "/assets/tools/api.svg",
-      "Vercel": "/assets/tools/vercel.svg",
-      "PHP Mailer": "/assets/tools/phpmailer.svg",
-      "NextJS": "/assets/tools/next.svg",
+      "Telegram": "/assets/tools/telegram.svg",
+      "Astro JS": "/assets/tools/astro.svg",
       "React": "/assets/tools/react.svg",
-      "Node.js": "/assets/tools/nodejs.svg",
-      "Python": "/assets/tools/python.svg",
-      "Node-red": "/assets/tools/nodered.svg",
       "Ubuntu": "/assets/tools/ubuntu.svg"
     };
     return iconMap[techName] || "/assets/tools/default.svg";
@@ -56,7 +49,7 @@ export default function Projects() {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {listProject.map((project) => (
+          {listProject.slice(0, 6).map((project) => (
             <div
               key={project.id}
               className="group relative overflow-hidden"
@@ -67,7 +60,7 @@ export default function Projects() {
                             hover:shadow-lg">
                 
                 {/* Header with Japanese Pattern */}
-                <div className="relative p-8 border-b border-[#e0d8ce] min-h-[140px] bg-gradient-to-br from-[#f5f1ea]/50 to-[#e0d8ce]/30">
+                <div className="relative p-8 border-b border-[#e0d8ce] min-h-[140px] bg-linear-to-br from-[#f5f1ea]/50 to-[#e0d8ce]/30">
                   <div className="relative z-10">
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center gap-2">
@@ -85,7 +78,7 @@ export default function Projects() {
                 </div>
 
                 {/* Content */}
-                <div className="p-8 flex flex-col flex-grow">
+                <div className="p-8 flex flex-col grow">
                   {/* Tech Stack */}
                   {project.technologies && project.technologies.length > 0 && (
                     <div className="mb-8">
@@ -158,40 +151,52 @@ export default function Projects() {
           ))}
         </div>
 
-        {/* GitHub CTA */}
-        <div className="mt-20 pt-16 border-t border-[#e0d8ce] text-center">
-          <div className="max-w-2xl mx-auto">
-            <div className="mb-8">
-              <span className="text-6xl text-[#8b4513]/20 block mb-4">続</span>
-              <p className="text-[#403D39] font-light mb-6">
-                Explore more of my work and ongoing experiments
-              </p>
-            </div>
-            
-            <Link
-              href="https://github.com/AbdFaiz"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex items-center gap-3 px-10 py-4 border-2 border-[#2d2d2d] 
-                       text-[#2d2d2d] hover:bg-[#2d2d2d] hover:text-[#f5f1ea] 
-                       transition-all duration-500 font-medium tracking-wide"
-            >
-              <span>View GitHub Profile</span>
-              <i className="ri-github-fill text-lg transition-transform duration-300 
-                          group-hover:scale-110"></i>
-            </Link>
+       {/* GitHub & All Projects CTA */}
+<div className="mt-20 pt-16 border-t border-[#e0d8ce] text-center">
+  <div className="max-w-2xl mx-auto">
+    <div className="mb-8">
+      <span className="text-6xl text-[#8b4513]/20 block mb-4">続</span>
+      <p className="text-[#403D39] font-light mb-6">
+        Explore more of my work and ongoing experiments
+      </p>
+    </div>
+    
+    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+      {/* View All Projects Button */}
+      <Link
+        href="/projects"
+        className="group relative inline-flex items-center gap-3 px-10 py-4 border border-[#8b4513] text-[#8b4513] hover:text-white hover:bg-[#8b4513] transition-all duration-500 font-medium tracking-wide w-full sm:w-auto"
+      >
+        <span>View All Projects</span>
+        <i className="ri-layout-grid-fill text-lg"></i>
+      </Link>
 
-            {/* Decorative Dots */}
-            <div className="flex justify-center gap-2 mt-12">
-              {[...Array(3)].map((_, i) => (
-                <div 
-                  key={i}
-                  className="w-1.5 h-1.5 bg-[#8b4513] rounded-full opacity-40"
-                ></div>
-              ))}
-            </div>
-          </div>
-        </div>
+      {/* GitHub Profile Button */}
+      <Link
+        href="https://github.com/AbdFaiz"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group inline-flex items-center gap-3 px-10 py-4 border-2 border-[#2d2d2d] 
+                 text-[#2d2d2d] hover:bg-[#2d2d2d] hover:text-[#f5f1ea] 
+                 transition-all duration-500 font-medium tracking-wide w-full sm:w-auto"
+      >
+        <span>GitHub Profile</span>
+        <i className="ri-github-fill text-lg transition-transform duration-300 
+                    group-hover:scale-110"></i>
+      </Link>
+    </div>
+
+    {/* Decorative Dots */}
+    <div className="flex justify-center gap-2 mt-12">
+      {[...Array(3)].map((_, i) => (
+        <div 
+          key={i}
+          className="w-1.5 h-1.5 bg-[#8b4513] rounded-full opacity-40"
+        ></div>
+      ))}
+    </div>
+  </div>
+</div>
       </div>
     </section>
   );
