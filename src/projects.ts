@@ -116,7 +116,7 @@ export const listProject: Project[] = [
     id: 14,
     nama: "Micro Division Attendance Dashboard",
     desk: "Internal dashboard to track attendance, lateness trends, and weekly/monthly reports.",
-    type: "preview",
+    type: "code",
     url: "https://github.com/AbdFaiz/absensi-micro",
     technologies: ["Laravel", "MySQL", "Bootstrap"],
   },
@@ -135,5 +135,13 @@ export const listProject: Project[] = [
     type: "code",
     url: "https://github.com/AbdFaiz/fz_music",
     technologies: ["JavaScript", "HTML", "CSS3"],
+  },
+  {
+    id: 17,
+    nama: "Nx Blog",
+    desk: "Landing page for a blog site built with Next.js and Tailwind CSS.",
+    type: "preview",
+    url: "https://nx-blog.vercel.app/",
+    technologies: ["Next.js", "Tailwind CSS", "Motion", "Shadcn UI"],
   },
 ];
