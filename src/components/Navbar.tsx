@@ -22,7 +22,7 @@ export default function Navbar() {
     { label: "Experience", jp: "経験", href: "#experience" },
     { label: "Skills", jp: "技能", href: "#skills" },
     { label: "Projects", jp: "制作", href: "#projects" },
-    { label: "Hobby", jp: "趣味", href: "#hobby" },
+    // { label: "Hobby", jp: "趣味", href: "#hobby" },
     { label: "Contact", jp: "連絡", href: "#contact" },
   ];
 
