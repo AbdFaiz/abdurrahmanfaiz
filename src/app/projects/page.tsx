@@ -12,6 +12,8 @@ export default function AllProjectsPage() {
       "Laravel": "/assets/tools/laravel.svg",
       "PHP": "/assets/tools/php.svg",
       "MySQL": "/assets/tools/mysql.svg",
+      "Supabase": "/assets/tools/supa.svg",
+      "Supa": "/assets/tools/supa.svg",
       "Bootstrap": "/assets/tools/bootstrap.svg",
       "JavaScript": "/assets/tools/js.svg",
       "jQuery": "/assets/tools/jquery.svg",
