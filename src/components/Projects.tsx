@@ -13,6 +13,7 @@ export default function Projects() {
       "Laravel": "/assets/tools/laravel.svg",
       "PHP": "/assets/tools/php.svg",
       "MySQL": "/assets/tools/mysql.svg",
+      "Supabase": "/assets/tools/supabase.svg",
       "Bootstrap": "/assets/tools/bootstrap.svg",
       "JavaScript": "/assets/tools/js.svg",
       "jQuery": "/assets/tools/jquery.svg",

@@ -136,4 +136,12 @@ export const listProject: Project[] = [
     url: "https://github.com/AbdFaiz/fz_music",
     technologies: ["JavaScript", "HTML", "CSS3"],
   },
+  {
+    id: 17,
+    nama: "Nxtree",
+    desk: "Clone linktree website with modern and clean design.",
+    type: "preview",
+    url: "https://nxtree.vercel.app/",
+    technologies: ["Next.js", "Tailwind CSS", "Supabase"],
+  },
 ];
